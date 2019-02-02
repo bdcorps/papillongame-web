@@ -246,7 +246,7 @@ h1 {
 @media only screen and (max-width: 992px) {
 
     .section {
-        margin: 0;
+        margin: 0 auto; display: block;
     }
 
     .main-title {
@@ -270,6 +270,7 @@ h1 {
 
     .main-desc {
         margin-top: 48px;
+        font-size:1.5rem;
     }
 
     .thumbnail {
@@ -280,6 +281,10 @@ h1 {
     .main-title {
         width: 100%;
     }
+
+    .footer{margin-top:408px;}
+
+    #open-popup{font-size: 2.5rem;padding:1.5rem 4rem;}
 
 }
 
