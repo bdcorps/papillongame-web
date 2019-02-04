@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
+app.use(express.static('static'))
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
@@ -31,6 +33,11 @@ app.get('/popup1', function(req, res) {
 app.get('/popup2', function(req, res) {
     res.render('popup2.ejs');
 });
+
+app.get('/.well-known/pki-validation/34CF20AEF7885A46FDF9757BA65C5608.txt', function(req, res) {
+    res.sendFile("./well-known/pki-validation/34CF20AEF7885A46FDF9757BA65C5608.txt");
+});
+
 
 
 // get the app environment from Cloud Foundry
